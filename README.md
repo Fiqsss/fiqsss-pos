@@ -14,8 +14,6 @@
 - run `` php artisan serve ``
 - then visit `` http://localhost:8000 or http://127.0.0.1:8000 ``.
 
-# Admin Credentials
-> Email: super.admin@test.com || Password: 12345678
 
 ## Demo
 ![Triangle POS](public/images/screenshot.jpg)
