@@ -14,9 +14,9 @@
 
 
 ## Demo
-![Fiqsss POS](public/demo/SC1.jpg)
-![Fiqsss POS](public/demo/SC2.jpg)
-![Fiqsss POS](public/demo/SC3.jpg)
+![Fiqsss POS](public/demo/SC1.png)
+![Fiqsss POS](public/demo/SC2.png)
+![Fiqsss POS](public/demo/SC3.png)
 **Live Demo:** will update soon
 
 ## Triangle POS Features
