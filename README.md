@@ -2,10 +2,8 @@
 
 # Local Installation
 
-- run `` git clone https://github.com/FahimAnzamDip/triangle-pos.git ``
-- run ``composer install `` 
-- run `` npm install ``
-- run ``npm run dev``
+- run `` https://github.com/Fiqsss/fiqsss-pos.git ``
+- run ``composer install ``
 - copy .env.example to .env
 - run `` php artisan key:generate ``
 - set up your database in the .env
@@ -16,7 +14,9 @@
 
 
 ## Demo
-![Triangle POS](public/images/screenshot.jpg)
+![Fiqsss POS](public/demo/SC1.jpg)
+![Fiqsss POS](public/demo/SC2.jpg)
+![Fiqsss POS](public/demo/SC3.jpg)
 **Live Demo:** will update soon
 
 ## Triangle POS Features
