@@ -18,17 +18,15 @@ new class extends Component {
         ];
     }
 
-
     public function deleteData($id)
     {
         $data = Member::find($id);
 
-        if($data->gambar)
-        {
-            Storage::disk('public')->delete('/member/'.$data->gambar);
+        if ($data->gambar) {
+            Storage::disk('public')->delete('/member/' . $data->gambar);
         }
         $data->delete();
-
+        return redirect('master/member')->with('success', 'member berhasil dihapus');
     }
 };
 
@@ -89,17 +87,33 @@ new class extends Component {
                         <td>{{ $data->telepon }}</td>
                         <td>{{ $data->email }}</td>
                         <td>
-                            <a data-toggle="modal" data-target="#edit{{ $data->id }}" class="btn btn-warning"><i
-                                    class="fas fa-edit"></i></a>
-                            <button wire:click="deleteData({{ $data->id }})" class="btn btn-danger"><i
-                                    class="fas fa-trash"></i></button>
-                            <button wire:click="delete({{ $data->id }})" class="btn btn-success"><i
-                                    class="fas fa-eye"></i></button>
+                            <a data-toggle="modal" data-target="#edit{{ $data->id }}"><i
+                                    class="fas fa-edit" style="color: orange"></i></a>
+                            <a data-toggle="modal" data-target="#dell{{ $data->id }}" class="mx-2" ><i
+                                    class="fas fa-trash" style="color:red"></i></a>
+
+                            <a wire:click="delete({{ $data->id }})" ><i
+                                    class="fas fa-eye" style="color:green"></i></a>
                         </td>
                         <div class="modal fade" id="edit{{ $data->id }}">
                             <livewire:member.editmember :$data :key="$data->id">
                         </div>
                     </tr>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="dell{{ $data->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content modal-">
+                                <div class="modal-body">
+                                    <h5>Yakin ingin menghapus Membaer <span class="text-danger">{{ $data->nama_member }}</span></h5>
+                                </div>
+                                <div class="modal-footer">
+                                    <button wire:click="deleteData({{ $data->id }})" type="button" class="btn btn-danger w-25">Hapus</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 @endforeach
             </tbody>
         </table>
@@ -108,7 +122,6 @@ new class extends Component {
         </div>
     </div>
     <!-- /.card-body -->
-
 
     <!-- /.modal insert modal-->
     <div class="modal fade" id="insert">

@@ -89,8 +89,12 @@ new class extends Component {
 
                         <div class="col-6">
                             <label class="mt-3" for="img">Gambar</label>
-                            <input id="img" type="file"
-                                wire:model='gambar'>
+                            <label for="img"
+                                class="w-100 h-50 borde-1 d-flex justify-content-center align-items-center "
+                                style="border-style:dashed;">
+                                <i class="fas fa-plus"></i>
+                                <label />
+                                <input hidden id="img" type="file" wire:model='gambar'>
                         </div>
                     </div>
             </div>

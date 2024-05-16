@@ -30,13 +30,6 @@ new class extends Component {
         $this->email = $data->email;
         $this->gambar = $data->gambar;
     }
-    // public function with()
-    // {
-    //     return [
-    //         'barangs' => Barang::latest()->paginate(),
-    //         'kategoris' => Kategori::latest()->get(),
-    //     ];
-    // }
 
     public function editMember()
     {
@@ -111,8 +104,11 @@ new class extends Component {
 
                         <div class="col-6">
                             <label class="mt-3" for="img">Gambar</label>
-                            <input id="img" type="file" class="@error('gambarbaru') is-invalid @enderror mt-1 p-0"
-                                wire:model='gambarbaru'>
+                            <label for="img" class="w-100 h-50 borde-1 d-flex justify-content-center align-items-center "
+                                style="border-style:dashed;">
+                                <i class="fas fa-plus"></i></label>
+                            <input hidden id="img" type="file"
+                                class="@error('gambarbaru') is-invalid @enderror mt-1 p-0" wire:model='gambarbaru'>
                         </div>
                     </div>
             </div>

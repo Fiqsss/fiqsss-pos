@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\User;
 use App\Models\Barang;
 use App\Models\Cart;
 use App\Models\Kategori;
@@ -47,11 +48,15 @@ class DatabaseSeeder extends Seeder
                 MemberSeeder::class,
             ]
         );
-        // $this->call(
-        //     [
-        //         PenjualanSeeder::class,
-        //     ]
-        // );
+
+        User::create(
+            [
+                'name' => 'admin',
+                'email' => 'admin@admin.com',
+                'password' => bcrypt('111'),
+                'role' => 'admin'
+            ]
+            );
 
 
     }

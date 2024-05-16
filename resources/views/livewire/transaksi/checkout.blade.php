@@ -142,7 +142,6 @@ new class extends Component {
             <tr class="text-center">
                 <th>#</th>
                 <th>Nama Produck</th>
-                <th>Member</th>
                 <th>Jumlah</th>
                 <th>Total</th>
                 <th>Aksi</th>
@@ -157,9 +156,6 @@ new class extends Component {
                     <tr class="text-center">
                         <td>{{ $a + 1 }}</td>
                         <td>{{ $data->barang->nama_barang }}</td>
-                        <td>
-                            <input wire:model.live='member' wire:model.change='member' type="text" readonly>
-                        </td>
                         <td class="text-center">
                             <div class="w-100 d-flex justify-content-center align-items-center ">
                                 <button wire:click.prevent='kurangiStock({{ $data->id }})'

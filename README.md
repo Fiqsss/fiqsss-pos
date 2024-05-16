@@ -12,7 +12,6 @@
 - run `` php artisan serve ``
 - then visit `` http://localhost:8000 or http://127.0.0.1:8000 ``.
 
-
 ## Demo
 ![Fiqsss POS](public/demo/SC1.png)
 ![Fiqsss POS](public/demo/SC2.png)

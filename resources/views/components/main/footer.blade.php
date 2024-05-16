@@ -42,18 +42,18 @@
         showConfirmButton: false,
         timer: 3000
     });
-    @if (session('insertsuccess'))
-        Toast.fire({
-            icon: 'success',
-            title: "{{ session('insertsuccess') }}"
-        })
-    @endif
     @if (session('success'))
         Toast.fire({
             icon: 'success',
             title: "{{ session('success') }}"
         })
     @endif
+    // @if (session('success'))
+    //     Toast.fire({
+    //         icon: 'success',
+    //         title: "{{ session('success') }}"
+    //     })
+    // @endif
     @if (session('gagal'))
         Toast.fire({
             icon: 'error',
